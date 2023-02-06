@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+</head>
+<body>
+
+<!-- Loader -->
+  <div class="loader hidden" id="loader">
+    <img src="nasa.svg" alt="loader">
+  </div>
+
+<!-- User Interface -->
+<div class="container">
+  <!-- navigatition -->
+  <div class="navigation-container">
+    <span class="background"></span>
+    <!-- Results Nav -->
+    <span class="navigation-items" id="resultsNav">
+      <h3 class="clickable" onclick="updateDOM('favorites')"> Favorites</h3>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+      <h3 class="clickable" onclick="getNasaData()">Load More</h3>
+    </span>
+    <!-- Favorites Nav -->
+    <span class="navigation-items hidden" id="favortiesNav">
+      <h3 class="clickable" onclick="getNasaData()">Load More NASA Images</h3>
+    </span>
+  </div>
+  <!-- Card Container -->
+  <div class="card-container">
+    <div class="image-container">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Save Confirmation -->
+<div class="saveConfirmed" hidden>
+  <h3>ADDED!</h3>
+</div>
+<!-- Remove Confirmation -->
+<div class="removeConfirmed" hidden>
+  <h3>Removed!</h3>
+</div>
+
+
+<!-- Script -->
+<script src="index.js"></script>
+</body>
+</html>

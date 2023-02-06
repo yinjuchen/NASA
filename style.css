@@ -1,0 +1,147 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(238, 223, 194);
+  overflow-x: hidden;
+  font-size: 1rem;
+  line-height: 1.8rem; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Loader */
+.loader {
+  background: rgb(238, 223, 194);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+}
+
+/* Navigation */
+.navigation-container {
+  position: fixed;
+  /* fixed it to the top */
+  top: 0;
+}
+
+.navigation-items {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.background {
+ position: fixed;
+ background: rgb(238, 223, 194);
+ height: 60px;
+ width: 100%;
+ right: 0;
+ z-index: -1;
+}
+
+.clickable {
+  color: rgb(160, 51, 51);
+  cursor: pointer;
+}
+
+.clickable:hover {
+  color:rgb(61, 50, 50);
+}
+
+/* Image Container */
+.image-container {
+  margin-top: 70px;
+  width: 800px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card {
+  /* outline: 2px solid black; */
+  background: whitesmoke;
+  margin: 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.card-title {
+  /* outline: 2px solid black; */
+  margin-top: 0px;
+  font-size: 24px;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+/* Save Confirmation */
+.saveConfirmed {
+  position: fixed;
+  background: rgb(191, 164, 115);
+  right: 20px;
+  bottom: 20px;
+  padding: 8px 16px;
+  border-radius:10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Remove Confirmation */
+.removeConfirmed {
+  position: fixed;
+  background: rgb(191, 164, 115);
+  right: 20px;
+  bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Hidden */ 
+/* The hidden class will overridden the display:flex */
+.hidden {
+  display: none;
+}
+
+/* Media Query */
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+  .image-container {
+    width: 100%;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .saveConfirmed {
+    padding: 4px 8px;
+    right: 15px;
+  }
+  .removeConfirmed {
+    padding: 4px 8px;
+    right: 15px;
+  }
+}
